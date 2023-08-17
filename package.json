@@ -1,0 +1,37 @@
+{
+  "name": "github-issue-viewer-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src --ext .ts --fix",
+    "build": "tsup src --out-dir build",
+    "start": "node build/server.js",
+    "start:dev": "tsx watch src/server.ts",
+    "test:e2e": "vitest run --dir src/http",
+    "test:e2e:watch": "vitest --dir src/http"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.1.0",
+    "@types/node": "^20.5.0",
+    "@types/supertest": "2.0.12",
+    "@vitest/coverage-v8": "0.34.1",
+    "@vitest/ui": "0.34.1",
+    "eslint": "^8.47.0",
+    "supertest": "6.3.3",
+    "tsup": "^7.2.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6",
+    "vitest": "0.34.1",
+    "vitest-tsconfig-paths": "3.4.1"
+  },
+  "dependencies": {
+    "@fastify/cors": "8.3.0",
+    "dotenv": "16.3.1",
+    "fastify": "^4.21.0",
+    "zod": "3.22.1"
+  }
+}
