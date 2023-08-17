@@ -1,0 +1,6 @@
+version: '3'
+services:
+  github-issues-viewer-app:
+    build: .
+    ports:
+      - "3333:3333"
