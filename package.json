@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint src --ext .ts --fix",
+    "build": "tsup src --out-dir build",
     "start": "node build/server.js",
     "start:dev": "tsx watch src/server.ts",
-    "build": "tsup src --out-dir build",
     "test:e2e": "vitest run --dir src/http",
     "test:e2e:watch": "vitest --dir src/http"
   },
