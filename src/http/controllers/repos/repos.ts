@@ -8,6 +8,7 @@ interface Owner {
 }
 
 interface Repo {
+  id: number
   full_name: string
   owner: Owner
 }
@@ -39,8 +40,9 @@ export async function fetchRepos(req: FastifyRequest, res: FastifyReply) {
     const json = await response.json()
 
     return res.status(200).send({
-      repos: json.items.map(({ full_name, owner }: Repo) => {
+      repos: json.items.map(({ id, full_name, owner }: Repo) => {
         return {
+          id,
           name: full_name,
           author: {
             username: owner.login,
