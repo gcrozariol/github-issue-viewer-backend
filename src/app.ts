@@ -17,10 +17,11 @@ app.register(cors, () => {
       origin: true,
     }
 
-    if (
-      env.NODE_ENV === 'production' ||
-      /^localhost$/m.test(req.headers.origin as string)
-    ) {
+    if (/^localhost$/m.test(req.headers.origin as string)) {
+      corsOptions.origin = false
+    }
+
+    if (/^onrender$/m.test(req.headers.origin as string)) {
       corsOptions.origin = false
     }
 
