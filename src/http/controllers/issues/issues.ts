@@ -30,7 +30,6 @@ export async function fetchIssuesFromRepo(
     const response = await fetch(
       `${env.GITHUB_API_URL}/repos/${owner}/${repo}/issues`,
       {
-        method: 'GET',
         headers: {
           Authorization: `Bearer ${env.GITHUB_ACCESS_TOKEN}`,
           Accept: 'application/vnd.github+json',
@@ -38,19 +37,13 @@ export async function fetchIssuesFromRepo(
       },
     )
 
-    if (response.status !== 200) {
-      return res
-        .status(response.status)
-        .send({ message: `Failed to fetch issues from repo: ${repo}.` })
+    if (!response.ok) {
+      return res.status(200).send({
+        issues: [],
+      })
     }
 
     const json = await response.json()
-
-    if (!Array.isArray(json)) {
-      return res.status(500).send({
-        message: 'Unexpected response from GitHub API',
-      })
-    }
 
     return res.status(200).send({
       issues: json.map(({ id, author, body, title, url }: Issue) => {
