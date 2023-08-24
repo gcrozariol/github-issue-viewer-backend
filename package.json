@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint src --ext .ts --fix",
     "build": "tsup src",
-    "start": "npm run build && node dist/server.js",
+    "start": "node dist/server.js",
     "start:dev": "tsx watch src/server.ts",
     "test:e2e": "vitest run --dir src/http",
     "test:e2e:watch": "vitest --dir src/http"
