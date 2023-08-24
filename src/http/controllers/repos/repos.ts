@@ -29,13 +29,21 @@ export async function fetchRepos(req: FastifyRequest, res: FastifyReply) {
     const response = await fetch(
       `${env.GITHUB_API_URL}/search/repositories?${query}`,
       {
-        method: 'GET',
         headers: {
           Authorization: `Bearer ${env.GITHUB_ACCESS_TOKEN}`,
           Accept: 'application/vnd.github+json',
         },
       },
     )
+
+    if (!response.ok) {
+      return res.status(200).send({
+        repos: [],
+        meta: {
+          total: 0,
+        },
+      })
+    }
 
     const json = await response.json()
 
