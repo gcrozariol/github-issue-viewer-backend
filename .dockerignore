@@ -1,4 +1,7 @@
+build
 node_modules
+
 .git
+
 .dockerignore 
 Dockerfile
