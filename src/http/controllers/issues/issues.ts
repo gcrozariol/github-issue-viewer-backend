@@ -8,6 +8,7 @@ interface Author {
 }
 
 interface Issue {
+  id: number
   author: Author
   title: string
   body: string
@@ -52,8 +53,9 @@ export async function fetchIssuesFromRepo(
     }
 
     return res.status(200).send({
-      issues: json.map(({ author, body, title, url }: Issue) => {
+      issues: json.map(({ id, author, body, title, url }: Issue) => {
         return {
+          id,
           author,
           body,
           title,
