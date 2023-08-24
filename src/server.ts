@@ -8,6 +8,6 @@ app
   })
   .then(() => {
     console.log(
-      `🚀 Server running on port ${env.PORT}. Environment: ${env.NODE_ENV}`,
+      `🚀 Server running on port ${env.PORT}. Environment: ${env.NODE_ENV}.`,
     )
   })
