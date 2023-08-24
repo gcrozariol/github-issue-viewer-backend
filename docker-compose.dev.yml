@@ -4,6 +4,9 @@ services:
   api:
     build:
       context: .
-      target: production
+      target: dev
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
     ports:
       - "3333:3333"

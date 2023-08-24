@@ -8,8 +8,8 @@
   },
   "scripts": {
     "lint": "eslint src --ext .ts --fix",
-    "build": "tsup src --out-dir build",
-    "start": "node build/server.js",
+    "build": "tsup src",
+    "start": "npm run build && node dist/server.js",
     "start:dev": "tsx watch src/server.ts",
     "test:e2e": "vitest run --dir src/http",
     "test:e2e:watch": "vitest --dir src/http"
@@ -32,6 +32,7 @@
     "vitest-tsconfig-paths": "3.4.1"
   },
   "dependencies": {
+    "@fastify/cors": "8.3.0",
     "dotenv": "16.3.1",
     "fastify": "^4.21.0",
     "zod": "3.22.1"
