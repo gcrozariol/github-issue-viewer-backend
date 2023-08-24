@@ -7,5 +7,7 @@ app
     host: '0.0.0.0',
   })
   .then(() => {
-    console.log(`🚀 Server running on port ${env.PORT}`)
+    console.log(
+      `🚀 Server running on port ${env.PORT}. Environment: ${env.NODE_ENV}`,
+    )
   })
