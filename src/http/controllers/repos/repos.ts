@@ -21,9 +21,9 @@ export async function fetchRepos(req: FastifyRequest, res: FastifyReply) {
 
   const { repo, user } = querySchema.parse(req.query)
 
-  let query = 'q=' + repo
+  let query = 'q=' + `${repo}+in:name`
 
-  if (user) query = query + `user:${user}`
+  if (user) query = query + `+user:${user}`
 
   try {
     const response = await fetch(
@@ -36,6 +36,8 @@ export async function fetchRepos(req: FastifyRequest, res: FastifyReply) {
       },
     )
 
+    console.log('url: ', response.url)
+
     if (!response.ok) {
       return res.status(200).send({
         repos: [],
@@ -45,7 +47,11 @@ export async function fetchRepos(req: FastifyRequest, res: FastifyReply) {
       })
     }
 
+    // console.log('response.ok: ', response.ok)
+
     const json = await response.json()
+
+    // console.log('json: ', json)
 
     return res.status(200).send({
       repos: json.items.map(({ id, full_name, owner }: Repo) => {
