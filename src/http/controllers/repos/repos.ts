@@ -36,8 +36,6 @@ export async function fetchRepos(req: FastifyRequest, res: FastifyReply) {
       },
     )
 
-    console.log('url: ', response.url)
-
     if (!response.ok) {
       return res.status(200).send({
         repos: [],
