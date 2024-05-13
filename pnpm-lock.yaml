@@ -38,8 +38,8 @@ devDependencies:
     specifier: ^8.57.0
     version: 8.57.0
   rimraf:
-    specifier: 5.0.1
-    version: 5.0.1
+    specifier: 5.0.7
+    version: 5.0.7
   supertest:
     specifier: 7.0.0
     version: 7.0.0
@@ -3746,9 +3746,9 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rimraf@5.0.1:
-    resolution: {integrity: sha512-OfFZdwtd3lZ+XZzYP/6gTACubwFcHdLRqS9UX3UwpU2dnGQYkPFISRwvM3w9IiB2w7bW5qGo/uAwE4SmXXSKvg==}
-    engines: {node: '>=14'}
+  /rimraf@5.0.7:
+    resolution: {integrity: sha512-nV6YcJo5wbLW77m+8KjH8aB/7/rxQy9SZ0HY5shnwULfS+9nmTtVXAJET5NdZmCzA4fPI/Hm1wo/Po/4mopOdg==}
+    engines: {node: '>=14.18'}
     hasBin: true
     dependencies:
       glob: 10.3.10
