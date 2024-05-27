@@ -47,8 +47,8 @@ devDependencies:
     specifier: ^8.0.2
     version: 8.0.2(typescript@5.4.5)
   tsx:
-    specifier: ^4.10.5
-    version: 4.10.5
+    specifier: ^4.11.0
+    version: 4.11.0
   typescript:
     specifier: ^5.4.5
     version: 5.4.5
@@ -2152,7 +2152,7 @@ packages:
       builtins: 5.0.1
       eslint: 8.57.0
       eslint-plugin-es-x: 7.5.0(eslint@8.57.0)
-      get-tsconfig: 4.7.4
+      get-tsconfig: 4.7.5
       globals: 13.24.0
       ignore: 5.2.4
       is-builtin-module: 3.2.1
@@ -2578,12 +2578,6 @@ packages:
     dependencies:
       call-bind: 1.0.5
       get-intrinsic: 1.2.2
-    dev: true
-
-  /get-tsconfig@4.7.4:
-    resolution: {integrity: sha512-ofbkKj+0pjXjhejr007J/fLf+sW+8H7K5GCm+msC8q3IpvgjobpyPqSRFemNyIMxklC0zeJpi7VDFna19FacvQ==}
-    dependencies:
-      resolve-pkg-maps: 1.0.0
     dev: true
 
   /get-tsconfig@4.7.5:
@@ -4255,8 +4249,8 @@ packages:
       - ts-node
     dev: true
 
-  /tsx@4.10.5:
-    resolution: {integrity: sha512-twDSbf7Gtea4I2copqovUiNTEDrT8XNFXsuHpfGbdpW/z9ZW4fTghzzhAG0WfrCuJmJiOEY1nLIjq4u3oujRWQ==}
+  /tsx@4.11.0:
+    resolution: {integrity: sha512-vzGGELOgAupsNVssAmZjbUDfdm/pWP4R+Kg8TVdsonxbXk0bEpE1qh0yV6/QxUVXaVlNemgcPajGdJJ82n3stg==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     dependencies:
