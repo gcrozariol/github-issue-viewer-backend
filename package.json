@@ -23,7 +23,7 @@
     "@types/supertest": "6.0.2",
     "@vitest/coverage-v8": "0.34.2",
     "@vitest/ui": "0.34.7",
-    "eslint": "^8.57.0",
+    "eslint": "^8.57.1",
     "rimraf": "6.0.1",
     "supertest": "7.0.0",
     "tsup": "^8.3.0",
