@@ -27,7 +27,7 @@
     "rimraf": "6.0.1",
     "supertest": "7.1.4",
     "tsup": "^8.5.0",
-    "tsx": "^4.20.4",
+    "tsx": "^4.20.5",
     "typescript": "^5.9.2",
     "vitest": "0.34.2",
     "vitest-tsconfig-paths": "3.4.1"
