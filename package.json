@@ -19,7 +19,7 @@
   "license": "ISC",
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
-    "@types/node": "^24.5.2",
+    "@types/node": "^24.7.2",
     "@types/supertest": "6.0.3",
     "@vitest/coverage-v8": "0.34.6",
     "@vitest/ui": "0.34.7",
