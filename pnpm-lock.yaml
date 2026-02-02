@@ -18,8 +18,8 @@ importers:
         specifier: ^4.28.1
         version: 4.29.1
       zod:
-        specifier: 3.25.74
-        version: 3.25.74
+        specifier: 4.3.6
+        version: 4.3.6
     devDependencies:
       '@rocketseat/eslint-config':
         specifier: ^2.2.2
@@ -2886,6 +2886,9 @@ packages:
 
   zod@3.25.74:
     resolution: {integrity: sha512-J8poo92VuhKjNknViHRAIuuN6li/EwFbAC8OedzI8uxpEPGiXHGQu9wemIAioIpqgfB4SySaJhdk0mH5Y4ICBg==}
+
+  zod@4.3.6:
+    resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
 
 snapshots:
 
@@ -5837,3 +5840,5 @@ snapshots:
       zod: 3.25.74
 
   zod@3.25.74: {}
+
+  zod@4.3.6: {}
